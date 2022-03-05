@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header, section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoimg {
+    color: #D2872C;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 0px 20px;
+}
+.menu {
+    width: 100%;
+    height: 150px;    
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0px 20px;
+}
+.menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: end;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+}
+.menu ul li a:last-child {
+    margin-right: 0;
+
+}
+.menu ul li a:hover {
+    background-color: #D2872C;
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+.menu--openner {
+    display: none;
+}
+.content {
+    flex-direction: column;
+    align-items: start;
+}
+.background {
+    z-index: 0;
+    position: absolute;
+    overflow: hidden;
+    max-width: 60vw;
+    width: 100%;
+    right: 50px;
+    top: 150px;
+}
+.text {
+    z-index: 1;
+    padding-left: 20px;
+}
+.text h1 {
+    font-size: 60px;
+    color: #766F68;
+}
+.text h2 {
+    font-weight: 500;
+    color: #766F68;
+    margin: 30px 0;
+}
+.text button {
+    width: 280px;
+    color: #FFF;
+    background-color: #D2872C;
+    height: 80px;
+    border-radius: 15px;
+    margin-top: 30px;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (min-width: 750px) and (max-width: 950px) {
+    .logoimg {
+        font-size: 28px;
+    }
+    .menu ul li a {
+        font-size: 20px;
+    }
+    .text h1 {
+        font-size: 45px;
+    }
+    .text h2 {
+        font-size: 20px;
+    }
+    .text button {
+        width: 200px;
+        height: 60px;
+        font-size: 18px;
+    }
+    .background {
+        top: 200px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 749px) {
+    .content {
+        align-items: center;
+    }
+    .logoimg {
+        font-size: 28px;
+    }
+    .menu ul li a {
+        font-size: 17px;
+    }
+    .text {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .text h1 {
+        font-size: 45px;
+    }
+    .text h2 {
+        font-size: 20px;
+    }
+    .text button {
+        width: 200px;
+        height: 60px;
+        font-size: 18px;
+    }
+    .background {
+        position: static;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 599px) {
+    .menu {
+        height: auto;
+    }
+    .logo {
+        height: auto;
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu--openner {
+        display: flex;
+        padding: 20px;
+        cursor: pointer;
+    }
+    .menu nav {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        z-index: 99;
+        color: white;
+        width: 70vw;
+        height: calc(100vh - 90px);
+        top: 90px;
+    }
+    .menu ul {
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+    }
+    .menu ul li {
+        display: flex;
+    }
+    .logo {
+        height: 90px;
+        width: auto;
+    }
+    .content {
+        align-items: center;
+    }
+    .logoimg {
+        font-size: 28px;
+    }
+    .menu ul li a {
+        font-size: 25px;
+        color: white;
+        width: 100%;
+    }
+    .menu ul li a:hover {
+        background-color: transparent;
+    } 
+    .text {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .text h1 {
+        font-size: 35px;
+    }
+    .text h2 {
+        font-size: 17px;
+    }
+    .text button {
+        width: 200px;
+        height: 60px;
+        font-size: 18px;
+    }
+    .background {
+        position: static;
+        display: flex;
+        align-items: center;
+        min-width: 300px;
+    }
+}
